@@ -1,3 +1,5 @@
+I'd like to make it clear that I don't have any serious intentions to work on this. I only uploaded it for archival purposes.
+
 Currently things that I'd like it to have:
 1) A way to restrict the .add() function to only take the input alphabet.
    Currently it's just up to you to uphold the contract. As a hack, I have decided to fail the insertion if the
