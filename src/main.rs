@@ -25,13 +25,19 @@ mod FA {
             }
         }
 
-        pub fn add(&mut self, from: Node, inp: char, to: Node) {
+        pub fn add(&mut self, from: Node, inp: char, to: Node) -> bool {
+            if !self.inp_alph.contains(&inp) {
+                return false;
+            }
+
             self.trans_table
                 .entry(from)
                 .or_default()
                 .entry(inp)
                 .or_default()
                 .push(to);
+
+            true
         }
 
         pub fn add_final(&mut self, node: Node) {
